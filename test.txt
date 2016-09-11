@@ -10,6 +10,7 @@
 -- Table structure for table `fielddesc`
 --
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 
 CREATE TABLE fielddesc (
   tableId int(11) NOT NULL default '0',
