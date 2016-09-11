@@ -11,6 +11,9 @@
 --
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
 CREATE TABLE fielddesc (
   tableId int(11) NOT NULL default '0',
   fieldId int(11) NOT NULL default '0',
