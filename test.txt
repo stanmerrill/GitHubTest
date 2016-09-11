@@ -1,0 +1,320 @@
+--- mysqldump -h localhost -u root -p control fielddesc groups  mainttables  tablesgroups  users  usersgroups
+----- Enter password: ********
+-- MySQL dump 9.09
+--
+-- Host: localhost    Database: control
+-- ------------------------------------------------------
+-- Server version       4.0.16-max-debug
+
+--
+-- Table structure for table `fielddesc`
+--
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+CREATE TABLE fielddesc (
+  tableId int(11) NOT NULL default '0',
+  fieldId int(11) NOT NULL default '0',
+  keySequence int(11) NOT NULL default '0',
+  length int(11) NOT NULL default '0',
+  displaySequence int(11) NOT NULL default '0',
+  NullableField char(1) NOT NULL default '',
+  searchField char(1) NOT NULL default '',
+  sortField char(1) NOT NULL default '',
+  showFieldInList char(1) NOT NULL default '',
+  autoKey char(1) NOT NULL default '',
+  tableName varchar(20) NOT NULL default '',
+  fieldName varchar(20) NOT NULL default '',
+  displayName varchar(20) default NULL,
+  dataType varchar(20) NOT NULL default '',
+  decimalPoints int(11) NOT NULL default '0',
+  defaultValue varchar(20) default NULL,
+  luTable varchar(20) default NULL,
+  luDatasource varchar(20) default NULL,
+  luKeyFieldName varchar(20) default NULL,
+  luDisplayFieldName varchar(20) default NULL,
+  displayLength int(11) NOT NULL default '0',
+  PRIMARY KEY  (tableId,fieldId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `fielddesc`
+--
+
+INSERT INTO fielddesc VALUES (1,1,1,11,0,'N','N','N','N','N','fielddesc','tableI
+d','tableId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,2,2,11,1,'N','N','N','N','N','fielddesc','fieldI
+d','fieldId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,3,0,11,2,'N','N','N','N','N','fielddesc','keySeq
+uence','keySequence','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,4,0,11,3,'N','N','N','N','N','fielddesc','length
+','length','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,5,0,11,4,'N','N','N','N','N','fielddesc','displa
+ySequence','displaySequence','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,6,0,1,5,'N','N','N','N','N','fielddesc','Nullabl
+eField','NullableField','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,7,0,1,6,'N','N','N','Y','N','fielddesc','searchF
+ield','searchField','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,8,0,1,7,'N','N','N','N','N','fielddesc','sortFie
+ld','sortField','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,9,0,1,8,'N','N','N','N','N','fielddesc','showFie
+ldInList','showFieldInList','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,10,0,1,9,'N','N','N','N','N','fielddesc','autoKe
+y','autoKey','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,11,0,20,10,'N','Y','N','Y','N','fielddesc','tabl
+eName','tableName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,12,0,20,11,'N','Y','N','Y','N','fielddesc','fiel
+dName','fieldName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,13,0,20,12,'Y','N','N','Y','N','fielddesc','disp
+layName','Display','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,14,0,20,13,'N','N','N','N','N','fielddesc','data
+Type','dataType','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,15,0,11,14,'N','N','N','N','N','fielddesc','deci
+malPoints','decimalPoints','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,16,0,20,15,'Y','N','N','N','N','fielddesc','defa
+ultValue','defaultValue','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,17,0,20,16,'Y','N','N','N','N','fielddesc','luTa
+ble','luTable','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,18,0,20,17,'Y','N','N','N','N','fielddesc','luDa
+tasource','luDatasource','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,19,0,20,18,'Y','N','N','N','N','fielddesc','luKe
+yFieldName','luKeyFieldName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,20,0,20,19,'Y','N','N','N','N','fielddesc','luDi
+splayFieldName','luDisplayFieldName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (1,21,0,11,20,'N','N','N','N','N','fielddesc','disp
+layLength','displayLength','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (2,22,1,11,0,'N','Y','N','Y','N','groups','groupId'
+,'groupId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (2,23,0,20,1,'N','Y','N','Y','N','groups','groupNam
+e','groupName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (3,24,1,11,0,'N','Y','N','Y','N','mainttables','tab
+leId','tableId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (3,25,0,20,1,'N','Y','N','Y','N','mainttables','dat
+asource','datasource','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (3,26,0,20,2,'N','Y','N','Y','N','mainttables','tab
+leName','tableName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (3,27,0,20,3,'N','Y','N','Y','N','mainttables','dis
+playTableName','displayTableName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,28,1,11,0,'N','Y','N','Y','N','tablesgroups','ta
+bleId','tableId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,29,2,11,1,'N','Y','N','Y','N','tablesgroups','gr
+oupId','groupId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,30,0,1,2,'N','Y','N','Y','N','tablesgroups','rea
+dRights','readRights','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,31,0,1,3,'N','Y','N','Y','N','tablesgroups','upd
+ateRights','updateRights','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,32,0,1,4,'N','Y','N','Y','N','tablesgroups','ins
+ertRights','insertRights','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (4,33,0,1,5,'N','Y','N','Y','N','tablesgroups','del
+eteRights','deleteRights','char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,34,1,10,0,'N','Y','N','Y','N','users','userId','
+userId','decimal',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,35,0,10,1,'N','Y','N','Y','N','users','logonName
+','logonName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,36,0,20,2,'N','Y','N','Y','N','users','lastName'
+,'lastName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,37,0,20,3,'N','Y','N','Y','N','users','firstName
+','firstName','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,38,0,40,4,'Y','Y','N','Y','N','users','email','e
+mail','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (5,39,0,10,5,'N','Y','N','Y','N','users','password'
+,'password','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (6,40,1,11,0,'N','Y','N','Y','N','usersgroups','use
+rId','userId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (6,41,2,11,1,'N','Y','N','Y','N','usersgroups','gro
+upId','groupId','int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,42,1,11,0,'N','N','N','Y','N','pet','petId','ID'
+,'int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,43,0,20,1,'Y','Y','N','Y','N','pet','petName','N
+ame','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,44,0,20,2,'Y','Y','N','Y','N','pet','owner','Own
+er','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,45,0,20,3,'Y','Y','N','Y','N','pet','species','S
+pecies','varchar',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,46,0,1,4,'Y','Y','N','Y','N','pet','sex','Sex','
+char',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,47,0,0,5,'Y','N','N','Y','N','pet','birth','Birt
+h','date',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,48,0,11,6,'Y','Y','N','Y','N','pet','age','Age',
+'int',0,'','','','','',9);
+INSERT INTO fielddesc VALUES (7,49,0,0,7,'Y','N','N','Y','N','pet','COST','Cost'
+,'float',0,'','','','','',9);
+
+--
+-- Table structure for table `groups`
+--
+
+CREATE TABLE groups (
+  groupId int(11) NOT NULL default '0',
+  groupName varchar(20) NOT NULL default '',
+  PRIMARY KEY  (groupId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO groups VALUES (1,'Admin');
+
+--
+-- Table structure for table `mainttables`
+--
+
+CREATE TABLE mainttables (
+  tableId int(11) NOT NULL default '0',
+  datasource varchar(20) NOT NULL default '',
+  tableName varchar(20) NOT NULL default '',
+  displayTableName varchar(20) NOT NULL default '',
+  PRIMARY KEY  (tableId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `mainttables`
+--
+
+INSERT INTO mainttables VALUES (1,'control','fielddesc','FieldDesc');
+INSERT INTO mainttables VALUES (2,'control','groups','groups');
+INSERT INTO mainttables VALUES (3,'control','mainttables','mainttables');
+INSERT INTO mainttables VALUES (4,'control','tablesgroups','tablesgroups');
+INSERT INTO mainttables VALUES (5,'control','users','users');
+INSERT INTO mainttables VALUES (6,'control','usersgroups','usersgroups');
+INSERT INTO mainttables VALUES (7,'pet','Pet','Pet');
+
+--
+-- Table structure for table `tablesgroups`
+--
+
+CREATE TABLE tablesgroups (
+  tableId int(11) NOT NULL default '0',
+  groupId int(11) NOT NULL default '0',
+  readRights char(1) NOT NULL default '',
+  updateRights char(1) NOT NULL default '',
+  insertRights char(1) NOT NULL default '',
+  deleteRights char(1) NOT NULL default '',
+  PRIMARY KEY  (tableId,groupId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `tablesgroups`
+--
+
+INSERT INTO tablesgroups VALUES (1,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (2,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (3,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (4,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (5,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (6,1,'Y','Y','Y','Y');
+INSERT INTO tablesgroups VALUES (7,1,'Y','Y','Y','Y');
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE users (
+  userId decimal(10,0) NOT NULL default '0',
+  logonName varchar(10) NOT NULL default '',
+  lastName varchar(20) NOT NULL default '',
+  firstName varchar(20) NOT NULL default '',
+  email varchar(40) default NULL,
+  password varchar(10) NOT NULL default '',
+  PRIMARY KEY  (userId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO users VALUES (1,'ADMIN','Merrill','Stanley','webmaster@JavaGearhead.
+com','TTR');
+INSERT INTO users VALUES (2,'a','User','Test','a@a.com','a');
+
+--
+-- Table structure for table `usersgroups`
+--
+
+CREATE TABLE usersgroups (
+  userId int(11) NOT NULL default '0',
+  groupId int(11) NOT NULL default '0',
+  PRIMARY KEY  (userId,groupId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `usersgroups`
+--
+
+INSERT INTO usersgroups VALUES (1,1);
+INSERT INTO usersgroups VALUES (1,2);
+INSERT INTO usersgroups VALUES (2,1);
+INSERT INTO usersgroups VALUES (2,2);
+
+
+C:\mysql\bin>
+
+C:\mysql\bin>mysqldump -h localhost -u root -p menagerie pet
+Enter password: ********
+-- MySQL dump 9.09
+--
+-- Host: localhost    Database: menagerie
+-- ------------------------------------------------------
+-- Server version       4.0.16-max-debug
+
+--
+-- Table structure for table `pet`
+--
+
+CREATE TABLE pet (
+  petId int(11) NOT NULL default '0',
+  petName varchar(20) default NULL,
+  owner varchar(20) default NULL,
+  species varchar(20) default NULL,
+  sex char(1) default NULL,
+  birth date default NULL,
+  age int(11) default NULL,
+  COST float default NULL,
+  PRIMARY KEY  (petId)
+) TYPE=MyISAM;
+
+--
+-- Dumping data for table `pet`
+--
+
+INSERT INTO pet VALUES (3,'Citation','Stan Merrill','Horses','M','2002-01-02',2,
+456);
+INSERT INTO pet VALUES (2,'Sea Biscuits','Bill Fry','Cat','M','2000-01-02',4,345
+5);
+INSERT INTO pet VALUES (1,'Sadie','Stan Merrill','Cat','F','1983-01-02',21,2.1);
+
+INSERT INTO pet VALUES (4,'Whirl Away','Stan Merrill','Horse','M','2003-01-01',3
+5,123457);
+INSERT INTO pet VALUES (5,'Sweety Pie','Lucinda J Merrill','Donkey','M','1995-02
+-29',58,345.78);
+
+
+C:\mysql\bin>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
