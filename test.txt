@@ -10,7 +10,7 @@
 -- Table structure for table `fielddesc`
 --
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+abcdefabcdef
 yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 
